@@ -1,0 +1,7 @@
+C:\Users\Sebastian S\source\repos\NeuralNetwork mk I\NeuralNetwork mk I\bin\Debug\NeuralNetwork mk I.exe.config
+C:\Users\Sebastian S\source\repos\NeuralNetwork mk I\NeuralNetwork mk I\bin\Debug\NeuralNetwork mk I.exe
+C:\Users\Sebastian S\source\repos\NeuralNetwork mk I\NeuralNetwork mk I\bin\Debug\NeuralNetwork mk I.pdb
+C:\Users\Sebastian S\source\repos\NeuralNetwork mk I\NeuralNetwork mk I\obj\Debug\NeuralNetwork mk I.csprojAssemblyReference.cache
+C:\Users\Sebastian S\source\repos\NeuralNetwork mk I\NeuralNetwork mk I\obj\Debug\NeuralNetwork mk I.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian S\source\repos\NeuralNetwork mk I\NeuralNetwork mk I\obj\Debug\NeuralNetwork mk I.exe
+C:\Users\Sebastian S\source\repos\NeuralNetwork mk I\NeuralNetwork mk I\obj\Debug\NeuralNetwork mk I.pdb
