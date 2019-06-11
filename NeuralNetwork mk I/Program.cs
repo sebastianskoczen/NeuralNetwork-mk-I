@@ -12,14 +12,19 @@ namespace NeuralNetwork_mk_I
     {
         static void Main(string[] args)
         {
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    Test_XOR();
-            //    Test_Iris();
-            //    Test_Kfold_Iris();
-            //}
+            Console.WriteLine("Benchmark results:");
+            Console.WriteLine("Setosa:\t\t 1\t 0\t 0");
+            Console.WriteLine("Versicolor:\t 0\t 1\t 0");
+            Console.WriteLine("Virginica:\t 0\t 0\t 1");
+            Console.WriteLine();
+            for (int i = 0; i < 10; i++)
+            {
+                //Test_XOR();
+                //Test_Iris();
+                Test_Kfold_Iris();
+            }
             //Test_SOM();
-            Test_SOM_Iris();
+            //Test_SOM_Iris();
             Console.ReadKey();
         }
 
@@ -161,19 +166,23 @@ namespace NeuralNetwork_mk_I
                     network.BackProp(t.Item2);
                 }
             }
+
             double[] result = network.FeedForward(new double[] { 5.0, 3.4, 1.6, 0.4 });
+            Console.Write("Setosa:\t\t");
             foreach(double d in result)
             {
                 Console.Write("{0:F3}\t", d);
             }
             Console.WriteLine();
             result = network.FeedForward(new double[] { 6.0, 2.2, 4.0, 1.0 });
+            Console.Write("Versicolor:\t");
             foreach (double d in result)
             {
                 Console.Write("{0:F3}\t", d);
             }
             Console.WriteLine();
             result = network.FeedForward(new double[] { 6.1, 3.0, 4.9, 1.8 });
+            Console.Write("Virginica:\t");
             foreach (double d in result)
             {
                 Console.Write("{0:F3}\t", d);
@@ -231,14 +240,14 @@ namespace NeuralNetwork_mk_I
                 network.BackProp(new double[] { 1 });
             }
 
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 0, 0, 0 })[0]));
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 0, 0, 1 })[0]));
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 0, 1, 0 })[0]));
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 0, 1, 1 })[0]));
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 1, 0, 0 })[0]));
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 1, 0, 1 })[0]));
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 1, 1, 0 })[0]));
-            Console.WriteLine(String.Format("  {0:F3}", network.FeedForward(new double[] { 1, 1, 1 })[0]));
+            Console.WriteLine(String.Format("0 0 0 |  {0:F3}", network.FeedForward(new double[] { 0, 0, 0 })[0]));
+            Console.WriteLine(String.Format("0 0 1 |  {0:F3}", network.FeedForward(new double[] { 0, 0, 1 })[0]));
+            Console.WriteLine(String.Format("0 1 0 |  {0:F3}", network.FeedForward(new double[] { 0, 1, 0 })[0]));
+            Console.WriteLine(String.Format("0 1 1 |  {0:F3}", network.FeedForward(new double[] { 0, 1, 1 })[0]));
+            Console.WriteLine(String.Format("1 0 0 |  {0:F3}", network.FeedForward(new double[] { 1, 0, 0 })[0]));
+            Console.WriteLine(String.Format("1 0 1 |  {0:F3}", network.FeedForward(new double[] { 1, 0, 1 })[0]));
+            Console.WriteLine(String.Format("1 1 0 |  {0:F3}", network.FeedForward(new double[] { 1, 1, 0 })[0]));
+            Console.WriteLine(String.Format("1 1 1 |  {0:F3}", network.FeedForward(new double[] { 1, 1, 1 })[0]));
             Console.WriteLine("\n\n");
             //Console.ReadKey();
         }
